@@ -1,0 +1,36 @@
+<ion-menu [content]="content">
+
+<!--<h1>hello world</h1>-->
+<div  style="background-color:#330000 ; padding: 30px" (click)="openPage(loginPage)">
+  <!--<img src="http://koodka.com/favicon.png" alt="" width="40" height="40" style="float:left"> -->
+
+  <span style="color:white;margin:20px">
+    Welcome to Koodka
+     </span>  
+   <ion-icon name="arrow-dropright" style="margin-left:40px;color:white" ></ion-icon>
+
+
+  <!--<h1>hello world</h1>-->
+</div>
+  <ion-content style="background-color: #F6F6F6">
+    <ion-list>
+   
+  <button ion-item *ngFor="#p of pages" (click)="openPage(p)">
+    <ion-icon name="{{p.name}}" style="margin-right:40px;color:gray"></ion-icon>
+       {{p.title}}   
+   </button>
+
+      
+   
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>
+
+<style>
+   summary::-webkit-details-marker {
+        display: none;
+    }
+</style>

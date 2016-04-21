@@ -1,0 +1,32 @@
+<ion-navbar dark navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Browse</ion-title>
+</ion-navbar>
+
+
+
+
+<!--<ion-card style="max-height:120px">-->
+    <ion-card *ngFor="#i of tasks" >
+    <img [src]="i.img">
+    <!--<img src="http://koodka.com/timthumb.php?src=http://koodka.com/ym-content/uploads/2016/01/16/884735107.jpeg&w=800&h=510">-->
+    <ion-list>
+      <b>{{i.title}}</b><br/><br/>
+      <b style="color:maroon">{{i.rs}}</b>
+<br/>      <span>{{i.dec}}</span>
+    </ion-list>
+</ion-card>
+
+
+<style>
+    ion-list{
+        margin-left: 160px;
+        /*float:right*/
+    }
+    img {
+        float:left;
+        width: 150px
+    }
+</style>

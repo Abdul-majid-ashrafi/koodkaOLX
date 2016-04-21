@@ -1,0 +1,171 @@
+<ion-navbar *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+       
+    </button>
+    <img src="http://koodka.com/favicon.png" alt="" height="45px" *ngIf="!show">
+   
+    <ion-title style="display:inline-table;margin-top:10px;position:absolute" *ngIf="!show">Location
+        <ion-icon name="arrow-dropdown" (click)="nextPage()"></ion-icon>
+    </ion-title>
+    <ion-searchbar *ngIf="show" style="margin-top:33px"></ion-searchbar>    
+    <ion-icon name="search" style="float: right;margin-right: 40px;margin-top:20px" (click)="clicked()"></ion-icon>
+
+</ion-navbar>
+
+<!--*ngIf="show"-->
+<ion-content>
+
+    
+    <ion-slides style="height:100px">
+
+  <ion-slide>
+    <img src="http://koodka.com/ym-content/uploads/2016/02/05/338165283.jpg" alt="" width="100%">
+  </ion-slide>
+  <ion-slide>
+    <img src="http://koodka.com/ym-content/uploads/2016/02/05/953765869.jpg" alt="" width="100%">
+  </ion-slide>
+
+
+</ion-slides>
+
+    <button (click)="PostPage()" id="btn">Submit a frree ad</button>
+
+
+
+
+    <br/>
+    <h4 class="future">Categories<br/>
+        <hr width="35%" class="hr_gray"/>
+    </h4>
+    <br/>
+
+
+
+    <ion-slides style="height:100px">
+
+        <ion-slide>
+
+            <div class="slider" style="">
+                <ion-card class="icon" style="color:green; width: 55px">
+                    <ion-icon name="desktop"></ion-icon>
+                </ion-card>
+                <span>Electronic(0)</span>
+            </div>
+
+
+            <div class="slider">
+                <ion-card class="icon" style="color:brown; width: 55px;margin-left:10px">
+                    <ion-icon name="snow"></ion-icon>
+                </ion-card>
+                <span>Community(0)</span>
+            </div>
+
+
+            <div class="slider">
+                <ion-card class="icon" style="color:#808000	;width:55px">
+                    <ion-icon name="aperture"></ion-icon>
+                </ion-card>
+                <span>Services(0)</span>
+            </div>
+
+            <div class="slider">
+                <ion-card class="icon" style="color:#191970;width:55px">
+                    <ion-icon name="home"></ion-icon>
+                </ion-card>
+                <span>Property(1)</span>
+            </div>
+        </ion-slide>
+
+
+        <ion-slide>
+            <div class="slider">
+                <ion-card class="icon" style="color:red;width:55px">
+                    <ion-icon name="man"></ion-icon>
+                </ion-card>
+                <span>Jobs(1)</span>
+            </div>
+
+
+            <div class="slider">
+                <ion-card class="icon" style="color:blue;width:55px">
+                    <ion-icon name="car"></ion-icon>
+                </ion-card>
+                <span>motors(0)</span>
+            </div>
+        </ion-slide>
+
+    </ion-slides>
+
+<!--================================Feature ads section=========================-->
+ <br/>
+    <h4 class="future">Feature ads<br/>
+        <hr width="30%" class="hr_gray"/>
+    </h4>
+    <br/>
+
+
+  <ion-slides [options]=options style="height:165px;margin-left:10px" Pager>
+     
+ <ion-slide  *ngFor="#i of tasks" style="margin-left : -10px" >
+     
+       <ion-card style="width:110px;max-height:150px">
+             <img [src]="i.img" style="height:100px" (click)="carPage()">
+            <ion-list>
+                <ion-item style="font-size:11px">
+                   {{i.title}}<br/>
+                <span style="color:#B74746;font-weight:bold">{{i.rs}}</span>
+                </ion-item>
+            </ion-list>    
+             </ion-card>
+  </ion-slide>
+
+
+</ion-slides>
+<br/>
+<br/>
+</ion-content>
+<style>
+  #btn{
+      margin-left:10px;
+      width:95%;
+      background-color:#FF5C00;
+      font-size:17px;
+  }
+    #sliderSection {
+        /*background-color: red;*/
+        padding: 20px;
+    }
+    
+    .slider {
+        margin: 5px;
+        display: inline-table;
+        text-align: center;
+    }
+    
+    .slider>span {
+        font-size: 12px;
+    }
+    
+    .icon {
+        font-size: 25px;
+        margin: 8px;
+        padding: 13px;
+        border-radius: 50px;
+        /*background-color: ;*/
+    }
+   
+    .hr_gray {
+        float: left;
+        padding: 1px;
+        background-color: limegreen
+    }
+    
+      
+    .future {
+        margin-left: 12px;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 2px;
+        line-height: 1.1;
+    }
+</style>

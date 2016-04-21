@@ -1,0 +1,51 @@
+<ion-navbar dark *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>login</ion-title>
+</ion-navbar>
+
+
+<ion-content style="background-color: #F6F6F6">
+    
+     <!--<button (click)="nextPage()"> Chacha.....</button>-->
+        <!--=============HEADER END============-->
+   
+  <div style="margin-left: 30px ;margin-right: 25px">
+<h3 style="color: #337ab7"><strong>Login</strong></h3>
+<!--<p>Please use  form below to login</p>-->
+
+ <ion-list inset>
+            <ion-icon name="star-outline"></ion-icon>
+            Email:
+            <ion-item>
+                <ion-input type="email" placeholder="email@email.com"></ion-input>
+            </ion-item>
+        </ion-list>
+        <br/>
+        <ion-list inset>
+            <ion-icon name="star-outline"></ion-icon>
+            Create Password:
+            <ion-item>
+                <ion-input type="password" placeholder="***********"></ion-input>
+            </ion-item>
+        </ion-list>
+        
+       <div  style="margin-left: 35px ;margin-right: 25px">
+            <h5 style="font-size:14px"> I don't have an account, <a  (click)="registerPage()">Join Now</a></h5>
+        <button>Sign in</button>
+        
+       </div>
+        
+        
+</div>
+
+
+  
+</ion-content>
+<style>
+     ion-list>ion-icon{
+    color: red;
+    font-size: 15px
+  }
+    </style>

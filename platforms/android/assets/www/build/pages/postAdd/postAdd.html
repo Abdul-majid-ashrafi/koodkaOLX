@@ -1,0 +1,84 @@
+<ion-navbar  dark *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>postAdd</ion-title>
+</ion-navbar>
+
+<ion-content>
+
+<div><br/>
+<button class="btn" style="float:left;width: 48%" light> <span><ion-icon name="camera"></ion-icon> </span></button>
+<button class="btn" style="float:right;width: 49%" light> <span><ion-icon name="images"></ion-icon> </span></button>
+</div>
+
+<br/>
+<ion-card>
+
+
+<ion-list>
+  <ion-item>
+    <ion-label>Choose a catregory of your item..</ion-label>
+    <ion-select>
+      <ion-option value="Electronic">Electronic</ion-option>
+      <ion-option value="Service">Service</ion-option>
+      <ion-option value="Community">Community</ion-option>
+      <ion-option value="Property">Property</ion-option>
+      <ion-option value="Jobs">Jobs</ion-option>
+      <ion-option value="motors">Motors</ion-option>
+      </ion-select>
+      </ion-item>
+</ion-list>
+
+<ion-item>
+    <ion-label fixed>What are you selling.?</ion-label>
+    <ion-input type="text" value=""></ion-input>
+  </ion-item>
+  <hr/>
+  <ion-item>
+    <ion-label fixed>Write a short descreption</ion-label>
+    <ion-input type="text" value=""></ion-input>
+  </ion-item>
+  
+   <hr/>
+  <ion-item>
+    <ion-label fixed>How much you want.?</ion-label>
+    <ion-input type="text" value=""></ion-input>
+  </ion-item>
+  
+   <hr/>
+  <ion-item>
+    <ion-label fixed>How can  i reach you.?</ion-label>
+    <ion-input type="text" value=""></ion-input>
+  </ion-item>
+
+</ion-card>
+<button style="float:right;margin-right:20px">Submit ad</button>
+
+</ion-content>
+
+
+<style>
+  div{
+   margin-left:10px;
+   width:95%;
+   /*background: white; */
+  }
+  
+  .btn{
+    background: white;
+    padding: 50px;
+  }
+
+span{
+  color: white;
+  font-size: 30px;
+  border-radius: 30px;
+  padding: 10px;
+  /*top: 20px;*/
+  /*position: absolute;*/
+  background-color: rebeccapurple;
+}
+
+
+</style>
